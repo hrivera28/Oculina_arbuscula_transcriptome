@@ -24,4 +24,4 @@ Transcriptomes were then annotated through blastx against the unitprot database 
 ### BUSCO scoring of transcriptomes (busco.sh) 
 To quantify transcriptome completeness, the coral and symbiont transcriptomes compared against the BUSCO Eukaryote_ob10, Metazoa_ob10 (coral only), and Embryophyta_ob10 (symbiont only) databases using BUSCO v.4.0.5. 
 
-Final transcriptome files are avaialable from the Davies Marine Population Genomics Lab Website: 
+Final transcriptome files are avaialable from the Davies Marine Population Genomics Lab Website: http://sites.bu.edu/davieslab/data-code/
