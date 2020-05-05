@@ -11,7 +11,7 @@
 
 
 ########### Separate host and symbiont transcriptomes
-# Using Davies's dirty host, dirty sym, clean host, clean sym fasta files (see Davies et al. 2016 Frontier of Marine Science)
+# Using Davies's dirty host, dirty sym, clean host, clean sym fasta files (see Davies et al. 2016 Frontiers in Marine Science)
 
 
 ### Step 1 Make database fasta files into BLAST dbs
