@@ -22,6 +22,6 @@ Highly similar isoforms generated from the Trinity assembly were further collaps
 Transcriptomes were then annotated through blastx against the unitprot database (downloaded June 12, 2019), with an E-value of 0.001. Reads that were annotated as “chroloplastic” or “chlorophyll” were removed from the coral transcriptome file (N=93). Genes annotated to Acropora millepora or Nematostella vectensis were removed from the symbiont transcriptome files (N=12). 
 
 ### BUSCO scoring of transcriptomes (busco.sh) 
-To quantify transcriptome completeness, the coral and symbiont transcriptomes compared against the BUSCO Eukaryote_ob10, Metazoa_ob10 (coral only), and Embryophyta_ob10 (symbiont only) databases using BUSCO v.4.0.5. 
+To quantify transcriptome completeness, the coral and symbiont transcriptomes compared against the BUSCO Eukaryote_ob10, Metazoa_ob10 (coral only), and Alveolata_ob10 (symbiont only) databases using BUSCO v.4.0.5. 
 
 Final transcriptome files are avaialable from the Davies Marine Population Genomics Lab Website: http://sites.bu.edu/davieslab/data-code/
