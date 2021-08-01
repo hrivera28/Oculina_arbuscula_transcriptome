@@ -25,3 +25,5 @@ Transcriptomes were then annotated through blastx against the unitprot database 
 To quantify transcriptome completeness, the coral and symbiont transcriptomes compared against the BUSCO Eukaryote_ob10, Metazoa_ob10 (coral only), and Alveolata_ob10 (symbiont only) databases using BUSCO v.4.0.5. 
 
 Final transcriptome files are avaialable from the Davies Marine Population Genomics Lab Website: http://sites.bu.edu/davieslab/data-code/
+
+![Graph of BUSCO scores for coral (host) and symbiont trasncritomes against BUSCO databases](https://github.com/hrivera28/Oculina_arbuscula_transcriptome/blob/master/BUSCO_collapsed_alv.png?raw=true)
