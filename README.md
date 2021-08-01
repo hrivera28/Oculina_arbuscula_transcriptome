@@ -26,4 +26,7 @@ To quantify transcriptome completeness, the coral and symbiont transcriptomes co
 
 Final transcriptome files are avaialable from the Davies Marine Population Genomics Lab Website: http://sites.bu.edu/davieslab/data-code/
 
-![Graph of BUSCO scores for coral (host) and symbiont trasncritomes against BUSCO databases](https://github.com/hrivera28/Oculina_arbuscula_transcriptome/blob/master/BUSCO_collapsed_alv.png?raw=true)
+![Graph of BUSCO scores for coral (host) and symbiont trasncritomes against BUSCO databases](https://github.com/hrivera28/Oculina_arbuscula_transcriptome/blob/master/BUSCO_collapsed_alv.png?raw=true){:height="50%" width="50%"}
+
+Graphs shows percentage of core BUSCO genes in various gene sets that were found in assembled O. arbuscula and B. psygmophilum transcriptomes. Both transcriptomes were matched to the eukaryota gene set. In addition, O. arbuscula was also matched to the metazoa gene set, and B. psygmophium to the alveolata gene set. The coral transcriptome contains a much higher proportion of the genes in BUSCO core eukaryota sets (>90%), while the symbiont transcriptome is more incomplete (46% missing), though results were better (only 31% missing) when considering the alveolata gene set (dinoflagellates are alveolates). ![image](https://user-images.githubusercontent.com/7366822/127758083-b8f01501-924b-4f41-9205-1fd8ae49ee42.png)
+
