@@ -69,14 +69,18 @@ python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_blast_noheader.br
 # module load anaconda
 # source activate biopython
 
+# before running this pull out just the contigs from the good_matches file 
+cut -f 1 dirty_host_blast_goodmatches.txt > dirty_host_contig_hits.txt 
+#etc. for the others
+
 # This gets you a list of the genes that you want to keep for each set
-comm -23 dirty_host_blast_goodmatches.txt clean_sym_blast_goodmatches.txt > clean_host_contigs_list.txt
-comm -23 dirty_sym_blast_goodmatches.txt clean_host_blast_goodmatches.txt > clean_sym_contigs_list.txt
+comm -23 dirty_host_contig_hits.txt clean_sym_contig_hists.txt > parsed_host_contigs_list.txt
+comm -23 dirty_sym_contig_hits.txt clean_host_contigs_hits.txt > parsed_sym_contigs_list.txt
 
 # use Sarah's get_seq2.py script to get clean fastas using BioPython
 # args are input_fasta seq_ids_to_keep output_fasta
-python /Sarah_scripts/get_seq2.py /DaviesData/Trinity/trinity_out_dir/noshorts.fasta clean_sym_contigs_list.txt sym_contigs_for16Sblast.fasta
-python /Sarah_scripts/get_seq2.py /DaviesData/Trinity/trinity_out_dir/noshorts.fasta clean_host_contigs_list.txt host_contigs_for16Sblast.fasta
+python /Sarah_scripts/get_seq2.py /DaviesData/Trinity/trinity_out_dir/noshorts.fasta parsed_sym_contigs_list.txt sym_contigs_for16Sblast.fasta
+python /Sarah_scripts/get_seq2.py /DaviesData/Trinity/trinity_out_dir/noshorts.fasta parsed_host_contigs_list.txt host_contigs_for16Sblast.fasta
 
 
 ### Step 6 Remove bacterial contaminants/ribosomal seqs
