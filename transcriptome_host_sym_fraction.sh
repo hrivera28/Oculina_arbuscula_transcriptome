@@ -51,10 +51,12 @@ cat subset*br > dirtyhost_blast.br
 
 # The 100 is the length of overlap and the 80 is the min percent identity to pull a match from the blast file
 
-python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_host_hits_cleaned.txt
-python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_sym_hits_cleaned.txt
-python /Sarah_scripts/sarahsblastparser.py 100 80 clean_sym_hits_cleaned.txt
-python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_hits_cleaned.txt
+python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_host_blast.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_sym_blast.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 clean_sym_blast.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_blast.br
+
+# ouput files will be names dirty_host_blast_goodmatches.txt, etc. 
 
 ### Step 5 Obtain lists of sequences to remove
 # Final host contigs = dirty host contigs - clean sym contigs
@@ -64,8 +66,8 @@ python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_hits_cleaned.txt
 # source activate biopython
 
 # This gets you a list of the genes that you want to keep for each set
-comm -23 dirty_host_hits_cleaned.txt clean_sym_hits_cleaned.txt > clean_host_contigs_list.txt
-comm -23 dirty_sym_hits_cleaned.txt clean_host_hits_cleaned.txt > clean_sym_contigs_list.txt
+comm -23 dirty_host_blast_goodmatches.txt clean_sym_blast_goodmatches.txt > clean_host_contigs_list.txt
+comm -23 dirty_sym_blast_goodmatches.txt clean_host_blast_goodmatches.txt > clean_sym_contigs_list.txt
 
 # use Sarah's get_seq2.py script to get clean fastas using BioPython
 # args are input_fasta seq_ids_to_keep output_fasta
