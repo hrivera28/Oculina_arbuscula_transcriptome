@@ -41,8 +41,12 @@ done
 
 # Each blast result was written to a subset[].br file
 # These were then combined within each directory
-cat subset*br > dirtyhost_blast.br
+cat subset*br > dirty_host_blast.br
 # etc for the four directories
+
+# the script used below doesn't want the header lines in the blast result files so then run: 
+
+grep -E -v '^#' dirty_host_blast.res > dirty_host_blast_noheader.br # etc. 
 
 ### Step 4 Parse the blast results and produce clean host and sym transcript files
 # Uses sarahs_blastparser.py script to get lists of which contigs belong to which set (see additional files)
@@ -51,10 +55,10 @@ cat subset*br > dirtyhost_blast.br
 
 # The 100 is the length of overlap and the 80 is the min percent identity to pull a match from the blast file
 
-python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_host_blast.br
-python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_sym_blast.br
-python /Sarah_scripts/sarahsblastparser.py 100 80 clean_sym_blast.br
-python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_blast.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_host_blast_noheader.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 dirty_sym_blast_noheader.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 clean_sym_blast_noheader.br
+python /Sarah_scripts/sarahsblastparser.py 100 80 clean_host_blast_noheader.br
 
 # ouput files will be names dirty_host_blast_goodmatches.txt, etc. 
 
