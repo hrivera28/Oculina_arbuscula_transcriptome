@@ -3,7 +3,7 @@
 import sys
 from Bio.Blast import NCBIXML
 #Usage, opens an outfile and then parses any number of .xml files into that outfile, printing all hits
-#parse_blastn.py outfile.txt anynumberofinfiles.xml
+#parse_blastn.py outfile.txt blasttype anynumberofinfiles.xml
 OUT = open(sys.argv[1], 'w')
 blasttype=sys.argv[2]
 
